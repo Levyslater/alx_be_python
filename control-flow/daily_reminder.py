@@ -2,7 +2,7 @@
 This script will ask the user for a single task, its priority level, and if it is time-sensitive.
  The program will then provide a customized reminder for that task.
 """
-task = input("Enter a task: ")
+task = input("Enter your task: ")
 priority = input("Priority (high/medium/low): ")
 is_time_bound = input("Is it time-bound? (yes/no):")
 
