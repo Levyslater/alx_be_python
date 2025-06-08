@@ -12,7 +12,7 @@ def main():
     try:
         value_to_convert = int(input("Enter the temperature to convert: "))
     except ValueError:
-        print("Please enter an integer for temperature")
+        print("Invalid temperature. Please enter a numeric value.")
     else:
         operation = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").upper()
         if operation == "C":
