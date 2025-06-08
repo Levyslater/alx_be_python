@@ -8,7 +8,7 @@ def main():
     def convert_to_celsius(fahrenheit):
         return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR 
     def convert_to_fahrenheit(celsius):
-        return CELSIUS_TO_FAHRENHEIT_FACTOR * celsius + 32  
+        return celsius + 32 * CELSIUS_TO_FAHRENHEIT_FACTOR  
     try:
         value_to_convert = int(input("Enter the temperature to convert: "))
     except ValueError:
