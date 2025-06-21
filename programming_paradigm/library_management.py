@@ -34,34 +34,34 @@ class Library:
     """This class manages the Book instances by storing them in a list"""
     def __init__(self):
         """Initializes an empty list to store Book instances"""
-        self._book = []
+        self._books = []
 
-    def add_book(self, book):
+    def add_books(self, book):
         """Adds book instances to the list"""
-        self._book.append(book)
+        self._books.append(book)
 
-    def check_out_book(self, title):
+    def check_out_books(self, title):
         """ marks a book as checked out, making it unavailable untill it's 
         returned"""
-        for book in self._book:
+        for book in self._books:
             if book.title == title and book.is_available():
                 book.check_out()
                 return f'Checked out: {book}'
         return "Book not available for checkout."
 
-    def return_book(self, title):
+    def return_books(self, title):
         """If a book was previously checked out, the book is unchecked
         and made available """
-        for book in self._book:
+        for book in self._books:
             if book.title == title and not book.is_available():
-                book.return_book()
+                book.return_books()
                 return f'Returned: {book}'
         return "Book not found or already returned."
 
     def list_available_books(self):
         """ iterates through the list and prints a string representation on instances
         that are available seoerated bya new line"""
-        available = [str(book) for book in self._book if book.is_available()]
+        available = [str(book) for book in self._books if book.is_available()]
         if not available:
             print("No books available.")
         print("\n".join(available))
