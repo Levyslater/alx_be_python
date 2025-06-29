@@ -37,7 +37,7 @@ class Calculator:
         return a + b
 
     @classmethod
-    def multiply(cls, a: float, b: float) -> float:
+    def multiply(cls, a, b):
         """
         Perform multiplication of two numbers and print the calculation type.
 

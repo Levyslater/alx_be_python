@@ -29,7 +29,7 @@ class Book:
         self.author = author
         self.year = year
 
-    def __str__(self) -> str:
+    def __str__(self):
         """
         Return a user-friendly string representation of the Book object.
 
@@ -38,7 +38,7 @@ class Book:
         """
         return f"{self.title} by {self.author}, published in {self.year}"
 
-    def __repr__(self) -> str:
+    def __repr__(self):
         """
         Return an unambiguous string representation of the Book object,
         suitable for debugging and recreating the object.
